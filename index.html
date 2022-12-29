@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header>
+            <div class="cover-blur"></div>
+            <div class="cover-dark"></div>
+            <h1>Currency converter</h1>
+            <section class="current-currency-courses">
+                <h4>Today is: <span class="current-date"></span></h4>
+                <div class="currency-courses-container">
+                    <p class="usd-course">1 USD: <span class="usd"></span></p>
+                    <p class="eur-course">1 EUR: <span class="eur"></span></p>
+                    <p class="gbp-course">1 GBP: <span class="gbp"></span></p>
+                    <p class="uah-course">1 UAH: <span class="uah"></span></p>
+                </div>
+            </section>
+        </header>
+        <main class="main-section">
+            <section class="currency-quota-section">
+                <div>
+                    <label for="quota">Quota:</label>
+                    <input id="quota" type="number" placeholder="Write a quota...">
+                </div>
+                <div>
+                    <label for="output">Result:</label>
+                    <input id="output" type="text" placeholder="Result" readonly>
+                </div>
+            </section>
+            <section class="currency-select-section">
+                <div class="select-from-section">
+                    <label for="select-from">From:</label>
+                    <select name="currency-selection" id="select-from">
+                        <option value="" disabled selected>Choose the currency</option>
+                        <option value="PLN">PLN</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="UAH">UAH</option>
+                        <option value="CZK">CZK</option>
+                    </select>
+                </div>
+                <div class="select-to-section">
+                    <label for="select-to">To:</label>
+                    <select name="currency-selection" id="select-to">
+                        <option value="" disabled selected>Choose the currency</option>
+                        <option value="PLN">PLN</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="UAH">UAH</option>
+                        <option value="CZK">CZK</option>
+                    </select>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <button class="exchange">Exchange now</button>
+        </footer>
+        <main class="currency-table-section">
+            <div class="currency-table-section-header">
+                <label for="date-input">All avaliable currency courses for the day:</label>
+                <input type="date" id="date-input">
+                <button class="get-courses">Get currency courses</button>
+            </div>
+            <section class="currency-table-container">
+
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

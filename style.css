@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', arial, sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#wrapper header {
+    position: relative;
+    height: 30vh;
+    padding: 2%;
+    border-bottom: 1px solid #ddd;
+}
+
+#wrapper header .cover-blur,
+#wrapper header .cover-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper header .cover-blur {
+    background-image: url(./images/polish_zloty.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+#wrapper header .cover-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+#wrapper header h1,
+#wrapper header .current-currency-courses {
+    position: absolute;
+    color: rgb(239, 239, 239);
+    text-shadow: 0 0 10px rgb(11, 11, 11);
+    z-index: 3;
+}
+
+#wrapper header h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#wrapper header .current-currency-courses {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    padding: 1%;
+    text-align: right;
+}
+
+#wrapper header .current-currency-courses h4 {
+    margin-bottom: 1%;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#wrapper header .current-currency-courses .current-date {
+    font-weight: 600;
+}
+
+#wrapper header .current-currency-courses .currency-courses-container span {
+    font-weight: 600;
+}
+
+#wrapper .main-section {
+    margin: 0 auto;
+    padding: 2%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper .main-section>* {
+    width: 100%;
+    margin: 1% 0;
+}
+
+#wrapper .main-section .currency-quota-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#wrapper .main-section .currency-quota-section>* {
+    width: 48%;
+    text-align: center;
+}
+
+#wrapper .main-section .currency-quota-section label {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#wrapper .main-section .currency-quota-section input {
+    padding: 0.5%;
+    font-size: 18px;
+}
+
+#wrapper .main-section .currency-quota-section input:focus {
+    outline: 2px solid rgb(104, 141, 115);
+    border-color: transparent;
+}
+
+#wrapper .main-section .currency-select-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+#wrapper .main-section .currency-select-section>* {
+    padding: 0 1%;
+    width: 100%;
+}
+
+#wrapper .main-section .currency-select-section label {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#wrapper .main-section .currency-select-section select {
+    font-size: 18px;
+    padding: 0.5%;
+    cursor: pointer;
+}
+
+#wrapper footer {
+    padding: 2%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#wrapper button {
+    color: rgb(248, 248, 248);
+    text-shadow: 0 0 2px black;
+    background-color: rgb(123, 166, 136);
+    border: none;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+#wrapper button:hover {
+    background-color: rgb(104, 141, 115);
+}
+
+#wrapper footer .exchange {
+    padding: 10px 15px;
+    font-size: 22px;
+}
+
+#wrapper .get-courses {
+    padding: 3px 10px;
+}
+
+#wrapper .currency-table-section {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+#wrapper .currency-table-section-header {
+    text-align: center;
+}
+
+#wrapper .currency-table-section table {
+    width: 100%;
+    margin-top: 3%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+#wrapper .currency-table-section th,
+#wrapper .currency-table-section td {
+    padding: 5px;
+}
+
+#wrapper .currency-table-section th.header-number-cell,
+#wrapper .currency-table-section th.header-name-cell:first-of-type {
+    width: 10%;
+    border-right: 1px solid #ddd;
+}
+
+#wrapper .currency-table-section td.currency,
+#wrapper .currency-table-section th.header-name-cell:nth-of-type(2) {
+    width: 50%;
+    border-right: 1px solid #ddd;
+}
+
+#wrapper .currency-table-section td.code,
+#wrapper .currency-table-section th.header-name-cell:nth-of-type(3) {
+    width: 20%;
+    border-right: 1px solid #ddd;
+}
+
+#wrapper .currency-table-section th.header-name-cell,
+#wrapper .currency-table-section tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#wrapper .currency-table-section th.header-name-cell {
+    font-size: 20px;
+}
+
+#wrapper .currency-table-section th.header-number-cell {
+    font-size: 18px;
+}
+
+
+#wrapper .currency-table-section td.code,
+#wrapper .currency-table-section td.mid {
+    text-align: right;
+}
+
+@media (max-width: 1440px) {
+    #wrapper .main-section {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    #wrapper header .current-currency-courses {
+        bottom: 2%;
+    }
+
+    #wrapper header .current-currency-courses h4 {
+        font-size: 20px;
+    }
+
+    #wrapper header .current-currency-courses .currency-courses-container>* {
+        font-size: 14px;
+    }
+
+    #wrapper .main-section {
+        width: 60%;
+    }
+
+    #wrapper .main-section .currency-quota-section label {
+        font-size: 20px;
+    }
+
+    #wrapper .main-section .currency-quota-section input {
+        padding: 0.3%;
+        font-size: 16px;
+    }
+
+    #wrapper .main-section .currency-select-section>* {
+        padding: 0 1%;
+    }
+
+    #wrapper .main-section .currency-select-section label {
+        font-size: 20px;
+    }
+
+    #wrapper .main-section .currency-select-section select {
+        font-size: 16px;
+        padding: 0.3%;
+        cursor: pointer;
+    }
+
+    #wrapper footer {
+        padding: 1%;
+    }
+
+    #wrapper footer .exchange {
+        font-size: 20px;
+    }
+
+    #wrapper .get-courses {
+        padding: 3px 10px;
+    }
+
+    #wrapper .currency-table-section {
+        margin: 2% auto;
+    }
+
+    #wrapper .currency-table-section table {
+        margin-top: 5%;
+    }
+
+    #wrapper .currency-table-section th,
+    #wrapper .currency-table-section td {
+        font-size: 15px;
+    }
+
+    #wrapper .currency-table-section th.header-name-cell {
+        font-size: 18px;
+    }
+
+    #wrapper .currency-table-section th.header-number-cell {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+
+    #wrapper header .current-currency-courses h4 {
+        font-size: 18px;
+    }
+
+    #wrapper .main-section {
+        width: 80%;
+    }
+
+    #wrapper .main-section .currency-quota-section label {
+        font-size: 18px;
+    }
+
+    #wrapper .main-section .currency-select-section label {
+        font-size: 18px;
+    }
+
+    #wrapper footer {
+        padding: 2%;
+    }
+
+    #wrapper footer .exchange {
+        font-size: 18px;
+    }
+
+    #wrapper .currency-table-section {
+        width: 80%;
+        margin: 2% auto;
+    }
+
+    #wrapper .currency-table-section table {
+        margin-top: 5%;
+    }
+
+    #wrapper .currency-table-section th,
+    #wrapper .currency-table-section td {
+        font-size: 15px;
+    }
+
+    #wrapper .currency-table-section th.header-name-cell {
+        font-size: 18px;
+    }
+
+    #wrapper .currency-table-section th.header-number-cell {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #wrapper header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #wrapper .main-section {
+        width: 100%;
+    }
+
+    #wrapper .main-section .currency-quota-section label {
+        font-size: 16px;
+    }
+
+    #wrapper .main-section .currency-quota-section input {
+        padding: 0.3%;
+        font-size: 16px;
+    }
+
+    #wrapper .main-section .currency-select-section label {
+        font-size: 16px;
+    }
+
+    #wrapper .main-section .currency-select-section select {
+        font-size: 15px;
+
+    }
+
+    #wrapper footer .exchange {
+        font-size: 18px;
+    }
+
+    #wrapper .currency-table-section {
+        width: 100%;
+        padding: 2%;
+        margin: 2% auto;
+    }
+
+    #wrapper .currency-table-section th,
+    #wrapper .currency-table-section td {
+        font-size: 14px;
+    }
+
+    #wrapper .currency-table-section th.header-name-cell {
+        font-size: 17px;
+    }
+
+    #wrapper .currency-table-section th.header-number-cell {
+        font-size: 16px;
+    }
+
+}
